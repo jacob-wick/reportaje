@@ -1,0 +1,97 @@
+/*
+Theme Name: Cyanotype Child
+Theme URI: https://wordpress.com/themes/cyanotype/
+Description: Cyanotype Child Theme
+Author: Automattic
+Author URI: https://wordpress.com/themes/
+Template: cyanotype
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cyanotype-child
+Tags: accessibility-ready, blog, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, one-column, rtl-language-support, sticky-post, translation-ready
+*/
+
+/* Global Styles */
+
+ul, li {
+	list-style: none;
+	margin-left: 0;
+}
+
+.comments-link:before {
+	display: none;
+}
+
+/* Front Page Styles */
+
+.front {
+	width: 100%;
+	margin: 0;
+}
+
+.post-on, .details {
+	font-size: 1.2rem;
+}
+
+.details {
+	font-family: Inconsolata, monospace;
+	margin-top: 1rem;
+}
+
+.details li {
+	line-height: 1.2rem;
+}
+
+.details li:nth-child(3) {
+	margin-top: 0.4rem;
+}
+
+.details li:lang(en-US):nth-child(3):before {
+	content: "Curator: ";
+}
+
+.details li:lang(es-MX):nth-child(3):before {
+	content: "Curaduría: ";
+}
+
+.details li:lang(en-US):nth-child(4):before {
+	content: "Funding: ";
+}
+
+.details li:lang(es-MX):nth-child(4):before {
+	content: "Patrocinio: ";
+}
+
+.the-category {
+	text-transform: lowercase;
+	font-weight: bold;
+}
+
+.the-category:hover {
+	text-decoration: underline;
+}
+
+/* Single Post Styles */
+
+.additional-links {
+	margin-top: 2rem;
+}
+
+.additional-links a {
+	text-decoration: underline;
+}
+
+.additional-links a:hover {
+	text-decoration: none;
+	font-style: oblique;
+}
+
+/* Footer Styles */
+
+.site-info a:lang(en-US):after {
+	content: "This blog is written by Jacob Wick.";
+}
+
+.site-info a:lang(es-MX):after {
+	content: "Blog escrito por Jacob Wick.";
+}
