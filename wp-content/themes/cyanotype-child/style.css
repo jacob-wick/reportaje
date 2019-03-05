@@ -36,6 +36,8 @@ ul, li {
 .details {
 	font-family: Inconsolata, monospace;
 	margin-top: 1rem;
+	padding-bottom: 1.2rem;
+	border-bottom: solid #fff 0.1rem;
 }
 
 .details li {
@@ -43,11 +45,11 @@ ul, li {
 }
 
 .details li:nth-child(3) {
-	margin-top: 0.4rem;
+	margin: 1.2rem 0;
 }
 
 .details li:lang(en-US):nth-child(3):before {
-	content: "Curator: ";
+	content: "Curator(s): ";
 }
 
 .details li:lang(es-MX):nth-child(3):before {

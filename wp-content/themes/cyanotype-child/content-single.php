@@ -10,12 +10,6 @@
 	$dates = get_field( 'dates' );
 	$curator = get_field ( 'curator' );
 	$funding = get_field ( 'funding' );
-	$additional_link_1 = get_field ( 'additional_link_1' );
-	$additional_link_2 = get_field ( 'additional_link_2' );
-	$additional_link_3 = get_field ( 'additional_link_3' );
-	$additional_title_1 = get_field ( 'additional_title_1' );
-	$additional_title_2 = get_field ( 'additional_title_2' );
-	$additional_title_3 = get_field ( 'additional_title_3' );
 
 ?>
 
@@ -52,19 +46,8 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<ul class="additional-links">
-		<li>Additional Links:</li>
-		<li><a href="<?php echo $additional_link_1 ?>" target="_blank"><?php echo $additional_title_1 ?></li>
-		<li><a href="<?php echo $additional_link_2 ?>" target="_blank"><?php echo $additional_title_2 ?></li>
-		<li><a href="<?php echo $additional_link_3 ?>" target="_blank"><?php echo $additional_title_3 ?></li>
-	</ul>
 
 	<footer class="entry-footer">
-		<?php
-			if ( '' != get_the_author_meta( 'description' ) ) :
-				get_template_part( 'author-bio' );
-			endif;
-		?>
 		<?php cyanotype_entry_meta(); ?>
 		<?php edit_post_link( __( 'Edit', 'cyanotype' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
