@@ -30,12 +30,20 @@
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<ul class="details">
-			<li><?php echo $location ?></li>
-			<li><?php echo $dates ?></li>
-			<li><?php echo $curator ?></li>
-			<li><?php echo $funding ?></li>
-		</ul>		
+		<?php if ( in_category('review') || in_category('critica') ) : ?>
+
+			<ul class="details">
+				<li><?php echo $location ?></li>
+				<li><?php echo $dates ?></li>
+				<li><?php echo $curator ?></li>
+				<li><?php echo $funding ?></li>
+			</ul>
+
+		<?php else : ?>
+
+			<p class="the-excerpt"><?php the_excerpt(); ?></p>
+
+		<?php endif; ?>
 
 		<div class="the-category">
 			<h4><?php the_category(); ?></h4>

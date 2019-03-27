@@ -21,12 +21,16 @@
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		
-		<ul class="details">
-			<li><?php echo $location ?></li>
-			<li><?php echo $dates ?></li>
-			<li><?php echo $curator ?></li>
-			<li><?php echo $funding ?></li>
-		</ul>	
+		<?php if ( in_category('review') || in_category('critica') ) : ?>
+
+			<ul class="details">
+				<li><?php echo $location ?></li>
+				<li><?php echo $dates ?></li>
+				<li><?php echo $curator ?></li>
+				<li><?php echo $funding ?></li>
+			</ul>
+
+		<?php endif; ?>
 	
 	</header>
 
