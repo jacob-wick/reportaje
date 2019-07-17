@@ -33,10 +33,23 @@
 		<?php if ( in_category('review') || in_category('critica') ) : ?>
 
 			<ul class="details">
-				<li><?php echo $location ?></li>
-				<li><?php echo $dates ?></li>
-				<li><?php echo $curator ?></li>
-				<li><?php echo $funding ?></li>
+
+				<?php if ( $location ) : ?>
+					<li><?php echo $location ?></li>
+				<?php endif; ?>
+				
+				<?php if ( $dates ) : ?> 
+					<li><?php echo $dates ?></li>
+				<?php endif; ?>
+
+				<?php if ( $curator ) : ?>
+					<li><?php echo $curator ?></li>
+				<?php endif; ?>
+
+				<?php if ( $funding ) : ?>
+					<li><?php echo $funding ?></li>
+				<?php endif; ?>
+				
 			</ul>
 
 		<?php else : ?>
