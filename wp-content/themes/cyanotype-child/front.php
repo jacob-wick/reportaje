@@ -30,8 +30,6 @@
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( in_category('review') || in_category('critica') ) : ?>
-
 			<ul class="details">
 
 				<?php if ( $location ) : ?>
@@ -52,11 +50,7 @@
 
 			</ul>
 
-		<?php else : ?>
-
 			<p class="the-excerpt"><?php the_excerpt(); ?></p>
-
-		<?php endif; ?>
 
 		<div class="the-category">
 			<h4><?php the_category(); ?></h4>
