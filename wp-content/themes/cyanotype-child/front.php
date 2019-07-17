@@ -49,7 +49,7 @@
 				<?php if ( $funding ) : ?>
 					<li><?php echo $funding ?></li>
 				<?php endif; ?>
-				
+
 			</ul>
 
 		<?php else : ?>
