@@ -3,14 +3,6 @@
  * @package Cyanotype
  * @since Cyanotype 1.0
  */
-	
-	// Get Variables
-
-	$location = get_field( 'location' );
-	$dates = get_field( 'dates' );
-	$curator = get_field ( 'curator' );
-	$funding = get_field ( 'funding' );
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -23,12 +15,7 @@
 		
 		<?php if ( in_category('review') || in_category('critica') ) : ?>
 
-			<ul class="details">
-				<li><?php echo $location ?></li>
-				<li><?php echo $dates ?></li>
-				<li><?php echo $curator ?></li>
-				<li><?php echo $funding ?></li>
-			</ul>
+			<?php the_Details(); ?>
 
 		<?php endif; ?>
 	

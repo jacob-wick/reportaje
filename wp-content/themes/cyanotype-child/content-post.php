@@ -11,16 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( 'post' == get_post_type() ) : 
-
-			$location = get_field( 'location' );
-			$dates = get_field( 'dates' );
-			$curator = get_field ( 'curator' );
-			$funding = get_field ( 'funding' );
-			$image = get_field ( 'cover_image' );
-			$size = "full";
-
-		?>
+		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-date">
 				<?php cyanotype_entry_date(); ?>
 			</div><!-- .entry-date -->
@@ -28,14 +19,9 @@
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	
-			<ul class="details">
-				<li><?php echo $location ?></li>
-				<li><?php echo $dates ?></li>
-				<li><?php echo $curator ?></li>
-				<li><?php echo $funding ?></li>
-			</ul>	
-
+		<?php the_Details(); ?>
 	</header>
+	
 	<?php
 		if ( is_sticky() ) :
 			cyanotype_post_thumbnail();

@@ -7,20 +7,12 @@
  * @package Cyanotype
  * @since Cyanotype 1.0
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'front'); ?>>
 	<header class="entry-header">
-		<?php if ( 'post' == get_post_type() ) : 
-
-			$location = get_field( 'location' );
-			$dates = get_field( 'dates' );
-			$curator = get_field ( 'curator' );
-			$funding = get_field ( 'funding' );
-			$image = get_field ( 'cover_image' );
-			$size = "full";
-
-		?>
+		<?php if ( 'post' == get_post_type() ) : ?>
 
 		<div class="entry-date">
 			<span class="posted-on"><?php cyanotype_entry_date(); ?></span>
@@ -30,25 +22,7 @@
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-			<ul class="details">
-
-				<?php if ( $location ) : ?>
-					<li><?php echo $location ?></li>
-				<?php endif; ?>
-				
-				<?php if ( $dates ) : ?> 
-					<li><?php echo $dates ?></li>
-				<?php endif; ?>
-
-				<?php if ( $curator ) : ?>
-					<li><?php echo $curator ?></li>
-				<?php endif; ?>
-
-				<?php if ( $funding ) : ?>
-					<li><?php echo $funding ?></li>
-				<?php endif; ?>
-
-			</ul>
+			<?php the_Details(); ?>
 
 			<p class="the-excerpt"><?php the_excerpt(); ?></p>
 

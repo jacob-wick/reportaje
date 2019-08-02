@@ -17,12 +17,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : 
 
-			$location = get_field( 'location' );
-			$dates = get_field( 'dates' );
-			$curator = get_field ( 'curator' );
-			$funding = get_field ( 'funding' );
-			$image = get_field ( 'cover_image' );
-			$size = "full";
+			get_theDetails();
 
 		?>
 
