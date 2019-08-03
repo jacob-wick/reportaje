@@ -37,10 +37,10 @@ function the_Details() {
     if (function_exists('pll_current_language')) {
         if (pll_current_language() == 'en') {
             if ( $location ) {
-                echo '<li>Location: ' . $location . '</li>';
+                echo '<li>' . $location . '</li>';
             }
             if ( $dates ) {
-                echo '<li>Dates: ' . $dates . '</li>';
+                echo '<li>' . $dates . '</li>';
             }
             if ( $curator ) {
                 echo '<li>Curator(s): ' . $curator . '</li>';
