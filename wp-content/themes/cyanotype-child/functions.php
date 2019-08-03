@@ -34,18 +34,40 @@ function the_Details() {
 
     echo '<ul class="details">';
 
-    if ( $location ) {
-        echo '<li>' . $location . '</li>';
+    if (function_exists('pll_current_language')) {
+        if (pll_current_language() == 'en') {
+            if ( $location ) {
+                echo '<li>Location: ' . $location . '</li>';
+            }
+            if ( $dates ) {
+                echo '<li>Dates: ' . $dates . '</li>';
+            }
+            if ( $curator ) {
+                echo '<li>Curator(s): ' . $curator . '</li>';
+            }
+            if ( $funding ) {
+                echo '<li>Funding: ' . $funding . '</li>';
+            }
+        }
+
+        if (pll_current_language() == 'es') {
+            if ( $location ) {
+                echo '<li>' . $location . '</li>';
+            }
+            if ( $dates ) {
+                echo '<li>' . $dates . '</li>';
+            }
+            if ( $curator ) {
+                echo '<li>Curaduría: ' . $curator . '</li>';
+            }
+            if ( $funding ) {
+                echo '<li>Patrocinio: ' . $funding . '</li>';
+            }
+        }    
     }
-    if ( $dates ) {
-        echo '<li>' . $dates . '</li>';
-    }
-    if ( $curator ) {
-        echo '<li>' . $curator . '</li>';
-    }
-    if ( $funding ) {
-        echo '<li>' . $funding . '</li>';
-    }
+    /*
+
+ */
 
     echo '</ul>';
 

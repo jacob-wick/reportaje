@@ -47,22 +47,6 @@ ul, li {
 	margin: 1.2rem 0;
 }
 
-.details li:lang(en-US):nth-child(3):before {
-	content: "Curator(s): ";
-}
-
-.details li:lang(es-MX):nth-child(3):before {
-	content: "Curaduría: ";
-}
-
-.details li:lang(en-US):nth-child(4):before {
-	content: "Funding: ";
-}
-
-.details li:lang(es-MX):nth-child(4):before {
-	content: "Patrocinio: ";
-}
-
 .the-category {
 	text-transform: lowercase;
 	font-weight: bold;
